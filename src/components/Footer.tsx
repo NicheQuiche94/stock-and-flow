@@ -16,7 +16,7 @@ export default function Footer() {
             </Link>
             <p className="text-beige-300 mb-8 max-w-sm leading-relaxed">
               Holistic retail advisory for family-run UK high street retailers. 
-              Helping independent shops thrive since 2009.
+              Helping independent shops thrive.
             </p>
           </div>
 
@@ -59,17 +59,13 @@ export default function Footer() {
         {/* Contact Bar */}
         <div className="mt-16 pt-8 border-t border-dark-700">
           <div className="flex flex-wrap gap-8 justify-center lg:justify-start">
-            <a href="mailto:hello@stockandflow.com" className="flex items-center gap-2 text-beige-300 hover:text-bronze transition-colors">
+            <a href="mailto:hello@stockandflow.co" className="flex items-center gap-2 text-beige-300 hover:text-bronze transition-colors">
               <Mail size={16} />
-              hello@stockandflow.com
-            </a>
-            <a href="tel:+44123456789" className="flex items-center gap-2 text-beige-300 hover:text-bronze transition-colors">
-              <Phone size={16} />
-              +44 123 456 789
+              hello@stockandflow.co
             </a>
             <span className="flex items-center gap-2 text-beige-300">
               <MapPin size={16} />
-              Manchester, UK
+              United Kingdom
             </span>
           </div>
         </div>
@@ -80,7 +76,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8 py-6">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-beige-400 text-sm">
-              © 2025 Stock & Flow. All rights reserved.
+              © {new Date().getFullYear()} Stock & Flow. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm text-beige-400">
               <Link href="/privacy" className="hover:text-bronze transition-colors">Privacy</Link>
