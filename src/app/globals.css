@@ -2,32 +2,84 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: var(--font-work-sans);
+  background-color: #F5F0EB;
+  color: #323232;
+  line-height: 1.7;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+::selection {
+  background-color: #B08D57;
+  color: white;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-merriweather);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Italic emphasis for headings */
+.font-display em, .font-display i {
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply bg-bronze-400 text-white px-8 py-4 font-medium transition-all duration-300 rounded;
+}
+
+.btn-primary:hover {
+  @apply bg-bronze-500;
+}
+
+.btn-secondary {
+  @apply border-2 border-beige-100 text-beige-100 px-8 py-4 font-medium transition-all duration-300 rounded;
+}
+
+.btn-secondary:hover {
+  @apply bg-beige-100 text-dark-900;
+}
+
+/* Light section buttons */
+.btn-primary-dark {
+  @apply bg-dark-900 text-beige-50 px-8 py-4 font-medium transition-all duration-300 rounded;
+}
+
+.btn-primary-dark:hover {
+  @apply bg-dark-800;
+}
+
+.btn-secondary-dark {
+  @apply border-2 border-dark-900 text-dark-900 px-8 py-4 font-medium transition-all duration-300 rounded;
+}
+
+.btn-secondary-dark:hover {
+  @apply bg-dark-900 text-beige-50;
+}
+
+/* Card Hover Effect */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(50, 50, 50, 0.1);
+}
+
+/* Focus States */
+input:focus, textarea:focus, select:focus {
+  @apply outline-none ring-2 ring-bronze-400 border-transparent;
 }
